@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,10 +6,10 @@
 
 body {
   margin: 0;
-  font-family: 'Lato', serif;
+  font-family: "Lato", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#d0d6d9, #b1b4ba);
+  background: linear-gradient(#f5fbff, #d8dbe3);
   color: #d9e2f1;
   min-height: 100vh;
 }
@@ -29,7 +29,7 @@ header img {
 }
 
 header h1 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 700;
   font-size: 3rem;
   margin: 1rem 0;
@@ -89,16 +89,16 @@ fieldset {
   color: #142020;
 }
 
-.control:has(input[type='checkbox']) {
+.control:has(input[type="checkbox"]) {
   display: flex;
   align-items: center;
 }
 
-.control:has(input[type='checkbox']) label {
+.control:has(input[type="checkbox"]) label {
   margin: 0;
 }
 
-.control input[type='checkbox'] {
+.control input[type="checkbox"] {
   display: inline-block;
   width: auto;
   max-width: none;
@@ -157,4 +157,35 @@ fieldset {
 .button-flat:focus {
   background-color: transparent;
   color: #869999;
+}
+
+.error {
+  background-color: rgba(255, 87, 87, 0.1);
+  border-left: 3px solid #ff5757;
+  color: #ff9999;
+  padding: 0.5rem 1rem;
+  border-radius: 0 4px 4px 0;
+  margin: 1rem 0;
+  list-style-position: inside;
+}
+
+.error li {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* This will add a little animation to draw attention to new errors */
+.error li {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
