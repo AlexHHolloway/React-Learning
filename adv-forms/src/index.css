@@ -119,8 +119,8 @@ form button:hover {
 
 .errors {
   list-style: none;
-  color: #fcc586;
-  font-size: 0.85rem;
+  color: #fc8686;
+  font-size: 0.9rem;
   padding: 0;
   margin-top: 0.5rem;
 }
