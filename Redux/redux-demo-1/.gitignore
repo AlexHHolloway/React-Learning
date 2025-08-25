@@ -60,3 +60,6 @@ npm-debug.log*
 
 # Redux DevTools Extension config
 redux-devtools-extension/
+
+# ESLint config
+.eslintrc.json
