@@ -20,7 +20,8 @@ export const fetchCartData = () => {
       dispatch(
         cartActions.replaceCart({
           items: cartData.items || [],
-          totalQuantity: cartData.totalQuantity,
+          totalQuantity: cartData.totalQuantity || 0,
+          totalPrice: cartData.totalPrice || 0,
         })
       );
     } catch (error) {
@@ -53,6 +54,7 @@ export const sendCartData = (cart) => {
           body: JSON.stringify({
             items: cart.items,
             totalQuantity: cart.totalQuantity,
+            totalPrice: cart.totalPrice,
           }),
         }
       );
@@ -77,6 +79,53 @@ export const sendCartData = (cart) => {
           status: "error",
           title: "Error",
           message: "Sending cart data failed.",
+        })
+      );
+    }
+  };
+};
+
+export const clearCartData = () => {
+  return async (dispatch) => {
+    // Clear cart locally first
+    dispatch(cartActions.clearCart());
+
+    // Show clearing notification
+    dispatch(
+      uiActions.showNotification({
+        status: "info",
+        title: "Cart Cleared!",
+        message: "All items have been removed from your cart.",
+      })
+    );
+
+    // Clear cart in database
+    const clearRequest = async () => {
+      const response = await fetch(
+        "https://test-project-8f5e9-default-rtdb.firebaseio.com/cart.json",
+        {
+          method: "PUT",
+          body: JSON.stringify({
+            items: [],
+            totalQuantity: 0,
+            totalPrice: 0,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Clearing cart data failed.");
+      }
+    };
+
+    try {
+      await clearRequest();
+    } catch (error) {
+      dispatch(
+        uiActions.showNotification({
+          status: "error",
+          title: "Error",
+          message: "Failed to clear cart in database.",
         })
       );
     }

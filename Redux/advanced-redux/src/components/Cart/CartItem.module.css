@@ -1,58 +1,94 @@
 .item {
-  margin: 1rem 0;
-  background-color: #575757;
-  padding: 1rem;
+  margin: 1.5rem 0;
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
 }
 
 .item h3 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1rem 0;
   font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
 }
 
 .item header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 1rem;
 }
 
 .details {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
 }
 
 .quantity span {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
+  color: #374151;
 }
 
 .price {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: bold;
+  color: #1f2937;
 }
 
 .itemprice {
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-style: italic;
+  color: #64748b;
 }
 
 .actions {
   display: flex;
   justify-content: flex-end;
-  margin: 0.5rem 0;
+  margin: 1rem 0 0 0;
+  gap: 0.5rem;
 }
 
 .actions button {
-  background-color: transparent;
-  border: 1px solid white;
-  margin-left: 0.5rem;
-  padding: 0.15rem 1rem;
+  background: #6b7280;
+  border: none;
+  padding: 0.5rem 1rem;
   color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
 }
 
-.actions button:hover,
+.actions button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.actions button:hover::before {
+  width: 100px;
+  height: 100px;
+}
+
+.actions button:hover {
+  background: #4b5563;
+  transform: scale(1.05);
+}
+
 .actions button:active {
-  background-color: #4b4b4b;
-  color: white;
+  transform: scale(1);
 }

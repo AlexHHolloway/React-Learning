@@ -1,12 +1,21 @@
 .products h2 {
-  color: white;
-  margin: 2rem auto;
+  color: #1a202c;
+  margin: 3rem auto;
   text-align: center;
   text-transform: uppercase;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 .products ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
