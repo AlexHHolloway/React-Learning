@@ -1,0 +1,49 @@
+.eventsList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.eventItem {
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.eventItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary-400, #007acc);
+}
+
+.eventLink {
+  display: block;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.eventLink:hover {
+  background-color: #111111;
+}
+
+.eventTitle {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-primary-600, #0066aa);
+  font-size: 1.25rem;
+}
+
+.eventDate {
+  margin: 0.25rem 0;
+  color: #666;
+  font-weight: 500;
+}
+
+.eventDescription {
+  margin: 0.5rem 0 0 0;
+  color: #555;
+  line-height: 1.5;
+}

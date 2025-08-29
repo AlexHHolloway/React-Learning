@@ -1,0 +1,41 @@
+.container {
+  max-width: 800px;
+}
+
+.title {
+  margin-bottom: 2rem;
+  color: var(--color-primary-600, #0066aa);
+}
+
+.infoItem {
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.descriptionContainer {
+  margin-bottom: 2rem;
+}
+
+.descriptionText {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.notFound {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.notFoundTitle {
+  color: var(--color-primary-600, #0066aa);
+  margin-bottom: 1rem;
+}
+
+.notFoundText {
+  color: #e0e0e0;
+}
