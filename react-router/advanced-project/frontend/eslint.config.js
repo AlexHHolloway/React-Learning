@@ -28,6 +28,7 @@ export default [
         console: 'readonly',
         process: 'readonly',
         fetch: 'readonly',
+        Response: 'readonly',
       },
     },
     settings: {

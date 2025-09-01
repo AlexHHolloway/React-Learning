@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+/dist/
+
+# Misc
+*.swp
+*.swo
+
+# Coverage
+coverage/
+
+# Optional: ignore data files
+/data/*.json
