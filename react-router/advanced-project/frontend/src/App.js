@@ -5,13 +5,14 @@ import HomePage from './pages/HomePage';
 import EventsPage from './pages/EventsPage';
 import EventDetailPage, {
   loader as eventDetailsLoader,
-  action as deleteEventAction
+  action as deleteEventAction,
 } from './pages/EventDetailPage';
 import NewEventPage from './pages/NewEventPage';
 import EditEventPage from './pages/EditEventPage';
 import ErrorPage from './pages/ErrorPage';
 import { loader as eventsLoader } from './pages/EventsPage';
-import {action as manipulateEventAction} from './components/EventForm';
+import { action as manipulateEventAction } from './components/EventForm';
+import NewsletterPage, { action as newsletterAction } from './pages/Newsletter';
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
               {
                 path: 'edit',
                 element: <EditEventPage />,
-                action: manipulateEventAction
+                action: manipulateEventAction,
               },
             ],
           },
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
             action: manipulateEventAction,
           },
         ],
+      },
+      {
+        path: 'newsletter',
+        element: <NewsletterPage />,
+        action: newsletterAction,
       },
     ],
   },
