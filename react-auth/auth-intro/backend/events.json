@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "title": "New Event!!!!",
+      "image": "https://memphisdrumshop.com/cdn/shop/files/Snare-Vault-2.png?v=1727190935&width=3840",
+      "date": "2025-09-18",
+      "description": "New Description. 🚀",
+      "id": "7cc0d0ed-3ec9-45e4-8ff0-ddd581429613"
+    },
+    {
+      "title": "New drumming event",
+      "image": "https://images.unsplash.com/photo-1608851486063-8fc4a6bd7cbc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2025-10-03",
+      "description": "some description about drumminghere",
+      "id": "4c24c6d6-9c89-47fa-90c6-82b6dedae00f"
+    },
+    {
+      "id": "e1",
+      "title": "React Conference 2025",
+      "date": "2025-09-15",
+      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
+      "description": "Join us for the biggest React conference of the year! Learn about the latest React features, best practices, and network with fellow developers from around the world.",
+      "location": "San Francisco, CA",
+      "time": "9:00 AM - 6:00 PM"
+    },
+    {
+      "id": "e2",
+      "title": "JavaScript Workshop",
+      "date": "2025-10-02",
+      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
+      "description": "Learn advanced JavaScript techniques and best practices in this intensive hands-on workshop. Topics include ES6+, async/await, closures, and modern JavaScript patterns.",
+      "location": "New York, NY",
+      "time": "10:00 AM - 4:00 PM"
+    },
+    {
+      "id": "e3",
+      "title": "Web Development Bootcamp",
+      "date": "2025-11-10",
+      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
+      "description": "Intensive bootcamp covering modern web development technologies including HTML5, CSS3, JavaScript, React, Node.js, and database management.",
+      "location": "Austin, TX",
+      "time": "9:00 AM - 5:00 PM"
+    },
+    {
+      "id": "e5",
+      "title": "Full-Stack Developer Summit",
+      "date": "2026-01-20",
+      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
+      "description": "A comprehensive summit for full-stack developers featuring the latest trends in both frontend and backend technologies. Network with industry leaders and participate in hands-on coding sessions.",
+      "location": "Chicago, IL",
+      "time": "8:00 AM - 7:00 PM"
+    }
+  ]
+}
