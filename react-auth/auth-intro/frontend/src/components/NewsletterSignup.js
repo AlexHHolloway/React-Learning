@@ -24,6 +24,7 @@ function NewsletterSignup() {
         name="email"
         placeholder="Sign up for newsletter..."
         aria-label="Sign up for newsletter"
+        autoComplete="email"
       />
       <button>Sign up</button>
     </fetcher.Form>

@@ -1,25 +1,32 @@
 import { Await } from 'react-router-dom';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 
-import { useRouteLoaderData, redirect } from 'react-router-dom';
+import { useRouteLoaderData, redirect, useParams } from 'react-router-dom';
 import EventItem from '../components/EventItem';
 import EventsList from '../components/EventsList';
+import { getAuthToken } from '../util/auth';
 
 function EventDetailPage() {
   const { event, events } = useRouteLoaderData('event-details');
+  const params = useParams();
+
+  // Scroll to top when event ID changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [params.eventId]);
 
   return (
     <>
       <Suspense fallback={<p style={{ textAlign: 'center' }}>Loading EVENT</p>}>
         <Await resolve={event}>
-          {(loadedEvent) => <EventItem event={loadedEvent} />}
+          {loadedEvent => <EventItem event={loadedEvent} />}
         </Await>
       </Suspense>
       <Suspense
         fallback={<p style={{ textAlign: 'center' }}>Loading EVENT LIST</p>}
       >
         <Await resolve={events}>
-          {(loadedEvents) => <EventsList events={loadedEvents} />}
+          {loadedEvents => <EventsList events={loadedEvents} />}
         </Await>
       </Suspense>
     </>
@@ -66,8 +73,12 @@ export async function loader({ params }) {
 
 export async function action({ params, request }) {
   const id = params.eventId;
+  const token = getAuthToken();
   const response = await fetch('http://localhost:8080/events/' + id, {
     method: request.method,
+    headers: {
+      'Authorization': 'Bearer ' + token,
+    },
   });
 
   if (!response.ok) {

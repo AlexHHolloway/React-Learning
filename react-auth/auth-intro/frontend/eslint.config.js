@@ -29,6 +29,13 @@ export default [
         process: 'readonly',
         fetch: 'readonly',
         Response: 'readonly',
+        URL: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
       },
     },
     settings: {

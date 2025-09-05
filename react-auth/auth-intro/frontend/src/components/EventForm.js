@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import classes from './EventForm.module.css';
+import { getAuthToken } from '../util/auth';
 
 function EventForm({ method, event }) {
   const actionData = useActionData();
@@ -40,6 +41,7 @@ function EventForm({ method, event }) {
           name="title"
           required
           defaultValue={event ? event.title : ''}
+          autoComplete="off"
         />
       </p>
       <p>
@@ -50,6 +52,7 @@ function EventForm({ method, event }) {
           name="image"
           required
           defaultValue={event ? event.image : ''}
+          autoComplete="url"
         />
       </p>
       <p>
@@ -60,6 +63,7 @@ function EventForm({ method, event }) {
           name="date"
           required
           defaultValue={event ? event.date : ''}
+          autoComplete="off"
         />
       </p>
       <p>
@@ -70,6 +74,7 @@ function EventForm({ method, event }) {
           rows="5"
           required
           defaultValue={event ? event.description : ''}
+          autoComplete="off"
         />
       </p>
       <div className={classes.actions}>
@@ -89,6 +94,7 @@ export default EventForm;
 export async function action({ request, params }) {
   const method = request.method;
   const data = await request.formData();
+  const token = getAuthToken();
 
   const eventData = {
     title: data.get('title'),
@@ -108,6 +114,7 @@ export async function action({ request, params }) {
     method: method,
     headers: {
       'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + token,
     },
     body: JSON.stringify(eventData),
   });

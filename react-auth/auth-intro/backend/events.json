@@ -1,13 +1,6 @@
 {
   "events": [
     {
-      "title": "New Event!!!!",
-      "image": "https://memphisdrumshop.com/cdn/shop/files/Snare-Vault-2.png?v=1727190935&width=3840",
-      "date": "2025-09-18",
-      "description": "New Description. 🚀",
-      "id": "7cc0d0ed-3ec9-45e4-8ff0-ddd581429613"
-    },
-    {
       "title": "New drumming event",
       "image": "https://images.unsplash.com/photo-1608851486063-8fc4a6bd7cbc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "date": "2025-10-03",
@@ -49,6 +42,13 @@
       "description": "A comprehensive summit for full-stack developers featuring the latest trends in both frontend and backend technologies. Network with industry leaders and participate in hands-on coding sessions.",
       "location": "Chicago, IL",
       "time": "8:00 AM - 7:00 PM"
+    }
+  ],
+  "users": [
+    {
+      "email": "alex@alex.com",
+      "password": "$2b$12$Bwz0pwSypOe.StZXO.g3IO6S.G7Bkz0Cx581UM70MN2G4QZLupOPK",
+      "id": "73bc56ef-81d1-4bea-aac1-db15da4746de"
     }
   ]
 }
