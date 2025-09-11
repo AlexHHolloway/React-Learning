@@ -1,0 +1,118 @@
+.header {
+  gap: 3rem;
+  margin: 3rem auto 5rem auto;
+  width: 90%;
+  max-width: 75rem;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  margin: 1rem 0;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta a:hover,
+.cta a:active {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+  transform: translateY(-2px);
+}
+
+.cta a:first-child {
+  background: transparent;
+  border: 2px solid #ff9b05;
+  color: #ff9b05;
+}
+
+.cta a:first-child:hover,
+.cta a:first-child:active {
+  background: #ff9b05;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ddd6cb;
+  max-width: 50rem;
+  width: 90%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.7;
+  margin: 2rem 0;
+}
+
+.suggestion {
+  font-size: 1.1rem;
+  color: #b89b84;
+  max-width: 40rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .errorCode {
+    font-size: 6rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta a {
+    width: 200px;
+    text-align: center;
+  }
+}
